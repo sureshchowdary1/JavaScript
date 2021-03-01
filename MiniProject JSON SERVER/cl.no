@@ -1,0 +1,29 @@
+
+1) JSON Server
+2) Ajax call
+3) promises
+4) async and await
+
+step-1
+------
+    Create JSON Server
+
+    product.JSON
+    ------------
+        {  "Products" : [
+                {"id":1 , "p_id":111, "p_name":"p_one"},{"id":3 , "p_id":333, "p_name":"p_three"},{"id":2 , "p_id":222, "p_name":"p_two"},...]
+        }
+
+step-2
+------
+    Deploy JSON file in JSON Server
+        > json-server --watch product.json
+    
+step-3
+------
+    Test the api generated
+
+step-4
+------
+    Develop theweb page
+    

@@ -1,0 +1,41 @@
+
+<h1>Debouncing</h1>
+
+<p> In debouncing when we click on a buitton it will excure after delay time is completed </p>
+
+<p> If we are keep on clicking the click function of previous click  will be cancled and new clicked function starts working</p>
+
+<p> If we are not waiting and clicking again and again in the mean time of processing . The previous time completed will be set back to 0 and timer starts from 0 every time we clicked the button</p>
+
+<p> To perform Debouncing the fixed functionis   => function (...args){}</p>
+
+<!-- EX -->
+
+    <button id="my_btn">Click Me</button>
+
+    <script>
+        const debouncing = (fn,delay)=>{
+            let timeOut;
+
+            return function(...args){
+                if(timeOut){
+                    clearTimeout(timeOut)
+                    console.log(timeOut , 'times cancled wait for 2 seconds')
+                }
+                timeOut = setTimeout(()=>{
+                    fn(...args)
+                },delay)
+            }
+        }
+
+        document.getElementById('my_btn').addEventListener('click', 
+                    debouncing(w => {                           // fn
+                        console.log('payment Success')
+                    },2000                                       // delay 
+                    )
+                )
+
+    </script>
+
+// timeOut is used to store the time after how much time you clicked button again 
+// clearTimeout() is used to clear and reset timer to 0

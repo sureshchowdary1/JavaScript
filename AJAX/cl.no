@@ -1,0 +1,27 @@
+
+- We can make the asynchronous communication by using jQuery(library)
+
+    By using ajax() we can make asynchronus communication
+
+
+AngularJS                    Angular11                   ReactJ S
+    $http(services)        HttpClient(services)           axios -module
+
+- We can communication with server in two ways
+    1. synchronous communication
+    2. Asynchronous communication
+
+- Execustion of requests one by one technically called as synchronous communication
+
+- Execustion of request independently at a time called as Asynchronous communication
+
+- We can make Asynchronous communication by using
+    jQuery
+    AngularJs/Angular11
+    ReactJS
+    VueJS
+
+- JQuery is the library ( JS library)
+- JQuery simplifies the DOM manipulation
+- We include JQuery by using CDN
+

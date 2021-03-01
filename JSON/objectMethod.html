@@ -1,0 +1,80 @@
+<script>
+let obj = {key1 : 'hello_1'}
+
+// freeze()
+// We can't add,modify and delete data
+// Object.freeze(obj)
+
+// console.log(obj)            // { key1: 'hello_1' }
+// obj.key1 = 'Angular'
+// console.log(obj)            // { key1: 'hello_1' }
+
+// obj.key2 = 'Angular'
+// console.log(obj)                //{ key1: 'hello_1' }
+
+// delete obj.key1
+
+// console.log(obj)                //{ key1: 'hello_1' }
+
+// seal() 
+// only we can read and modify
+// we cabt add or delete
+
+// Object.seal(obj)
+
+// console.log(obj)            // { key1: 'hello_1' }
+
+// obj.key1 = 'Angular'        
+// console.log(obj)            // { key1: 'Angular' }
+
+// obj.key2="Node"
+// console.log(obj)            // { key1: 'Angular' }
+
+// delete obj.key1
+// console.log(obj)            // { key1: 'Angular' }
+
+// definePrototype()
+// - we can read,add
+// we can delete 
+// we can only modify only when writable:true
+
+/*
+Object.defineProperty(obj, "key2" , {value:"hello2",writable:false})
+
+console.log(obj)            // {key1: "Hello", key2: "hello2"}
+obj.key2 = "Angular"        // {key1: "Hello", key2: "hello2"}
+
+delete obj.key2             // {key1: "Hello", key2: "hello2"}
+
+
+
+Object.defineProperty(obj, "key2" , {value:"hello2",writable:true})
+console.log(obj)            //{key1: "Hello", key2: "hello2"}
+
+obj.key2 = "Angular"        
+console.log(obj)            // {key1: "Hello", key2: "Angular"}
+*/
+
+// defineProperties()
+// We can read,add, modify
+// we can't delete
+// we can only modify when writable:tru
+
+Object.defineProperties(obj, { 'key2' : {value:'Angular' , writable:true} ,
+                                'key3' : {value:'React' , writable: false} 
+                            })
+
+console.log(obj)            // {key1: "hello_1", key2: "Angular", key3: "React"}
+
+obj.key2 = "NodeJS"
+obj.key3 = "MongoDB"
+console.log(obj)            // {key1: "hello_1", key2: "NodeJS", key3: "React"}
+
+// cant delete
+delete obj.key2
+delete obj.key3
+
+console.log(obj)            // {key1: "hello_1", key2: "NodeJS", key3: "React"}
+
+
+</script>

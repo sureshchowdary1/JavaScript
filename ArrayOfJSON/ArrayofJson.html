@@ -1,0 +1,44 @@
+<!--  creating the table with Array of Json Objects ( with hard code data) -->
+
+<script>
+let arr1 = [
+    { p_id:111 ,p_name : 'p_one' , p_cost:1000 },
+    { p_id:222 ,p_name : 'p_two' , p_cost:2000 },
+    { p_id:333 ,p_name : 'p_three' , p_cost:3000 },
+    { p_id:444 ,p_name : 'p_four' , p_cost:4000 },
+    { p_id:555 ,p_name : 'p_five' , p_cost:5000 }
+]
+
+document.write(
+    `
+    <table border='1' align='center' cell-spacing='10px'  cell-padding='10px' >
+        <tr>
+            <th> SNO </th>
+            <th> ID </th>
+            <th> NAME </th>
+            <th> COST </th>
+        </tr>
+        <tr>
+    `
+)
+    arr1.forEach((element,index)=>{
+        document.write(
+            `
+                <td> ${index +1} </td>
+                <td> ${element.p_id}</td>
+                <td> ${element.p_name}</td>
+                <td> ${element.p_cost}</td>
+
+            </tr>  
+            `
+        )
+
+    })
+
+    document.write(
+            `
+                
+            </table>
+            `
+    )
+</script>

@@ -1,0 +1,170 @@
+<!--
+// Data structure
+<script>
+// Ex: 
+    let obj = {}
+
+    let key1 = {}
+    let value1 = 100
+    obj[key1]= value1
+
+    let key2 = {}
+    let value2 = 200
+    obj[key2]= value2
+
+    console.log(obj)                    //  {[object Object]: 200}
+
+    // / the first value is rewritten with the new value if the key is OBJECT 
+    // To over come this netScape released dataStructure like (Map , WeakMap ,Set ,WeakSet)
+
+</script>
+-->
+
+<script>
+// Map
+// ---
+        // - Map it dont allow dublicate  keys and replace the value with new value
+
+//     keys can be string , object, number , bigint,boolean, null,symbol
+
+// let map = new Map()
+// console.dir(map)    // to elaubrate the map directive
+
+// Map()            - Used to create the map
+// clear()          - Used to clear the map (all data)
+// delete()         - Used to delete particular key
+// entries(), forEach() , for...of()  - Used to iterate
+// get()            - Used to get particular key
+// has()            - Used to check whether parcticular data  present  or not
+// keys()           - Used to get all the keys
+// set()            - Used to set the data to the Map
+// values()         - Used to get all the values
+// size             - Used to know the size of Map
+
+// let map = new Map()
+    
+//     let key1 = {}
+//     let value1 = 100
+//     map.set(key1 , value1)
+
+//     let key2 = {}
+//     let value2 = 200
+//     map.set(key2 , value2)
+
+//     console.log(map)                // {{…} => 100, {…} => 200}
+/*
+// Ex:
+    let map = new Map()
+    
+        map.set('key1',100)
+            .set(100,200)
+            .set(true,false)
+            .set({},400)
+    console.log(map)                // Map(4) {"key1" => 100, 100 => 200, true => false, {…} => 400}
+    console.log(map.has('key1'))    // true
+    map.delete('key1')
+    console.log(map.keys())         //  MapIterator {100, true, {…}}
+    
+    console.log(map.values())       //  MapIterator {200, false, 400}
+
+    for(let [k,v] of map){
+        console.log(k,v)            // 100 200
+                                    // true false
+                                    // {} 400
+    }
+
+    console.log(map.size)           // 3
+
+    map.clear() 
+    console.log(map)                // {}
+*/
+</script>
+
+
+<script>
+/*
+    // WeakMap
+    // -------
+        // - Keys only object '{}'
+
+        // let eakMap = new WeakMap()
+        // console.dir(weakMap)
+
+        // WeakMap()        - Used tocreate object to weakMap
+        // delete()         - Used  to delete particular key
+        // get()            - Used to get the data 
+        // has()            - Used to check wheter element present or not
+        // set()            - Used to set data to the weakMap
+
+        let weakMap  = new WeakMap
+
+        weakMap.set({} , 100)
+        weakMap.set({} , 200)
+
+        console.log(weakMap)        // WeakMap {{…} => 100, {…} => 200}
+
+        // weakMap.set(30 ,100)        // uncaught TypeError: Invalid value used as weak map key
+*/
+</script>
+
+<script>
+/*
+    // Set()
+    // -----
+        // Set won't allow duplicate values
+
+        // let set = new Set()
+        // console.dir(set)
+
+        // Set()                                - Used to create the object to set
+        // add()                                - Used to add data to set
+        // clear()                              - Used to clear data 
+        // delete()                             - Used to delete particular value
+        // entries(), forEach() , for...of      - Used to iterate
+        // has()                                - Used to check weher value is present or not
+        // values()                             - Used to get all values
+        // size                                 - Used to get size
+
+        let set = new Set()
+
+        set.add(10)
+        set.add(20)
+        set.add(30)
+        set.add(10)
+        set.add(20)
+        set.add(30) 
+                    // it wont allow duplicate values
+        // console.log(set )                   // Set(3) {10, 20, 30}
+                    // To get array form
+        // console.log([...new Set([10,20,30,10,20,30])])  //  (3) [10, 20, 30]
+
+        // console.log(set.has(30))        // true
+        // set.delete(30)
+        // console.log(set.has(30))        // false
+
+
+        for(let v of set){
+            console.log(v)              // 10 20
+        }
+
+        console.log(size)               // 2
+*/
+</script>
+
+<script>
+    // WeakSet()
+    // ---------
+        // - To add only object '{}'
+
+        let weakSet =new WeakSet()
+
+        weakSet.add({})
+               .add({})
+
+        // console.log(weakSet)            // WeakSet {{…}, {…}}
+
+        .add(10)
+
+        console.log(weakSet)                // Uncaught TypeError: Invalid value used in weak set
+
+</script>

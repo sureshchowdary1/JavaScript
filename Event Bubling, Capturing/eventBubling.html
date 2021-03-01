@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT BUBBLING</title>
+</head>
+<body>
+    
+    - Propagation of event from child to parent
+    - we use getElementById() to event BUBBLING // also querySelector
+
+    <div id="parent" style="border: 1px solid red; width: 300px; height: 300px; margin: 50px auto;">
+        <div id="child" style="border: 1px solid blue; width: 200px; height: 200px;margin: 50px  auto;">
+            <div id="subChild" style="border: 1px solid green; width: 100px; height: 100px;margin:  50px auto;"></div>
+        </div>
+    </div>
+
+    <script>
+        let parent = document.querySelector('#parent')
+        let child = document.querySelector('#child')
+        let subChild = document.querySelector('#subChild')
+
+        parent.addEventListener('click', ()=> {
+            console.log('parent')
+        })
+        child.addEventListener('click', ()=> {
+            console.log('child')
+        })
+        subChild.addEventListener('click', ()=> {
+            console.log('subChild')
+        })
+                    // parent clicked       // parent
+                    // child clicked        // child parent
+                    // subChild clicked     // subChild child parent
+    </script>
+</body>
+</html>

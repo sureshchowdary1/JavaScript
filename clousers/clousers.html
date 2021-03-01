@@ -1,0 +1,16 @@
+
+<script>
+// A function inside another function called as 'inner' function
+// inner function has the capability to access 'outer" function data ,  and 'global' data also
+// If inner function acceess outer function data then such scenario technically called as clouser.
+
+// Ex:
+    function f_one(){
+        var x = 10
+        var y =20
+        return ()=>{console.log(x , y)}
+    }
+    // console.dir(f_one())             // dir is used to elabrate the DOM structure
+                        // 0: Closure (f_one) {x: 10, y: 20}
+
+</script>

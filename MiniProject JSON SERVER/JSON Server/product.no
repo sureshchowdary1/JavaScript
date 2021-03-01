@@ -1,0 +1,21 @@
+
+JSON server used to develop the Rest API's (GET,POST,PUT,DELETE)
+
+JSON server,will support only JSON data
+
+we will test rest api using postMan
+
+we will install JSON server, by using following command
+    > npm install -g json-server
+
+We will start the JSON server by using following command
+    > json-server --watch ex.json
+
+- JSON default server port is 3000
+    we can use that url for ( GET, POST, PUT, DELETE )
+
+sort : http://localhost:3000/Products?_sort=p_id&_order=asc / desc
+
+slice : http://localhost:3000/Products?_start=1&_end=3          ( 1 will include and 3 will exclude) (1,2)      start from 0
+
+slice and sort : http://localhost:3000/Products?_start=1&_end=3&_sort=p_id&_order=asc          ( filter and sort)

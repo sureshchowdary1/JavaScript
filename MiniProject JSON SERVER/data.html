@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    
+    <script>
+        function makeAsyncCall(){
+            return new Promise((resolve,reject)=>{
+                $.ajax({
+                    method:'GET',
+                    url:'http://localhost:3000/Products',
+                    success:(posRes)=>{
+                        resolve (posRes)
+                    },
+                    error:(errRes)=>{
+                        resolve (errRes)
+                    }
+                })
+            })
+        }
+
+        async function consumerPromise(){
+            let res = await makeAsyncCall()
+            console.log(res)
+            document.write(
+                `
+                <table style=" border: 1px solid black; " >
+                    <tr>
+                        <th>ID</th>
+                        <th>PID</th>
+                        <th>PNAME</th>
+                    </tr>
+                    
+                `
+            )
+            res.forEach((element,index)=>{
+                document.write(
+                    `
+                    <tr>
+                    <td> ${element.id} </td>
+                    <td> ${element.p_id} </td>
+                    <td> ${element.p_name} </td>
+                    `
+                )
+            });
+            document.write(
+                `
+                <tr>
+                </table>
+                `
+            )
+        }
+        consumerPromise()
+    </script>
+
+</body>
+</html>
