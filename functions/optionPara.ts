@@ -1,3 +1,16 @@
+// While calling the function , few parameters are optional 
+// Optional parameters are introduced in ES6
+// We will represent optional parameters by using '  ?  '
+// Default value of Optional parameter are undefined
+// Optional parameters works in TS environment
+// Converting of TS to equivalent JS called as ' Transpilation '
+// 'tsc' tool used to perform Transpilation
+    // > npm install -g typescript
+
+    // tsc file_name.ts
+    // node file_name.js
+
+
 // function f_one(arg1?:string,arg2?:string):void{
 //     console.log(arg1,arg2)       //undefined undefined
 // }

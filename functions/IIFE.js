@@ -1,3 +1,7 @@
+// - Immidiate Invokable Functional Expression 
+// IIFE also called as ' Self Invokable Function'
+
+    // syntax:
 // (
 //     ()=>{
 

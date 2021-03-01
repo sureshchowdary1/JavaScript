@@ -19,6 +19,14 @@
 // console.log(var_one()())               // hello
 
 // sending the 
+// The function with name called as Named function
+
+// syntax :
+    // function name(params) {
+        
+    // }
+    // name(params)
+
 
 let arr = []
 

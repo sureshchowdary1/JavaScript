@@ -1,3 +1,14 @@
+// - We will store 'more than one value in function argument'
+// we will represent rest parameter with ' ... '
+// ' ... ' operator called as spread operator
+// We should need to place spread operator in last argument in parameters
+// We cant take more than one spread operator in argument
+// synatx:
+    // function name(...arg) {
+        
+    // }
+    // name(1,2,3,)
+
 // only rest para meter is allowed
 // rest parameter should be placed last
 

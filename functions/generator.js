@@ -1,5 +1,10 @@
+// It is used to control the flow of excution inside function call, then we will choose Generator
+
 // generate function will prefex with " * '"
 // inside generate function, each statement will prefix with " yield "
+
+// after return yield will not be excute
+
 /*
 function *f_one(){
     yield ' heloo_1';

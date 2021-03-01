@@ -1,3 +1,10 @@
+// While defining the function, we will assign parameter with default values
+    // syntax:
+        // function name(params="value1") {
+            
+        // }
+        // name()
+
 // function f_one(arg1=1 ,arg2=2){
 //     console.log(arg1 , arg2)
 // }
